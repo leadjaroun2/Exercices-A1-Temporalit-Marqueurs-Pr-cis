@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Grammaire Française</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Quiz de Grammaire A1</h1>
+        <div id="quiz">
+            <p id="question"></p>
+            <div id="options"></div>
+            <p id="feedback"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
