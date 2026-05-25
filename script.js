@@ -147,12 +147,17 @@ function checkAnswer(idx) {
     
     if(idx === qData.a) {
         optButtons[idx].classList.add("correct");
-        // ... le reste de ton code pour le feedback
+        feedback.innerHTML = `<strong>Bravo !</strong><br>${qData.note}<br><em>(${qData.noteEn})</em>`;
+        setTimeout(() => {
+            current = (current + 1) % questions.length;
+            feedback.innerHTML = ""; // Efface le message
+            loadQuestion();
+        }, 3000); // 3 secondes d'attente
     } else {
         optButtons[idx].classList.add("wrong");
-        optButtons[qData.a].classList.add("correct"); // Montre la bonne réponse
+        optButtons[qData.a].classList.add("correct");
+        feedback.innerHTML = `<strong>Réessaie !</strong><br>${qData.note}<br><em>(${qData.noteEn})</em>`;
     }
-    // ...
-}
+} // Cette accolade ferme la fonction checkAnswer
 
 loadQuestion();
