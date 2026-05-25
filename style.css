@@ -10,3 +10,5 @@ button:hover { background: #e0e0e0; }
     width: auto;
     margin: 5px auto;
 }
+.correct { background-color: #d4edda !important; border-color: #28a745 !important; }
+.wrong { background-color: #f8d7da !important; border-color: #dc3545 !important; }
