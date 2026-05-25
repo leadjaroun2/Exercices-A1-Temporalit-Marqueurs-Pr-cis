@@ -139,17 +139,20 @@ function toggleTraduction() {
 }
 
 function checkAnswer(idx) {
-    const feedback = document.getElementById("feedback");
+    const optButtons = document.getElementById("options").querySelectorAll("button");
     const qData = questions[current];
+    
+    // Désactiver tous les boutons après le clic pour éviter les doubles clics
+    optButtons.forEach(btn => btn.disabled = true);
+    
     if(idx === qData.a) {
-        feedback.innerHTML = `<strong>Bravo ! / Well done!</strong><br>${qData.note}<br><em>(${qData.noteEn})</em>`;
-        setTimeout(() => {
-            current = (current + 1) % questions.length;
-            loadQuestion();
-        }, 3500);
+        optButtons[idx].classList.add("correct");
+        // ... le reste de ton code pour le feedback
     } else {
-        feedback.innerHTML = `<strong>Réessaie ! / Try again!</strong><br>${qData.note}<br><em>(${qData.noteEn})</em>`;
+        optButtons[idx].classList.add("wrong");
+        optButtons[qData.a].classList.add("correct"); // Montre la bonne réponse
     }
+    // ...
 }
 
 loadQuestion();
