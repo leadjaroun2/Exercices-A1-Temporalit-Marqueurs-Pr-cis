@@ -3,3 +3,10 @@ body { font-family: 'Segoe UI', sans-serif; text-align: center; background: #f4f
 button { display: block; width: 100%; margin: 10px 0; padding: 10px; cursor: pointer; border: 1px solid #ccc; border-radius: 5px; }
 button:hover { background: #e0e0e0; }
 #feedback { font-weight: bold; margin-top: 15px; }
+#btn-trad {
+    background-color: #f0f0f0;
+    font-size: 0.8em;
+    padding: 5px;
+    width: auto;
+    margin: 5px auto;
+}
